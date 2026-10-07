@@ -23,7 +23,7 @@ export const RESUME_DATA = {
     social: [
       {
         name: "github",
-        url: "https://github.com/Kirillr-Sibirski",
+        url: "https://github.com/Krlberg",
         icon: GitHubIcon,
       },
       {
@@ -103,7 +103,7 @@ export const RESUME_DATA = {
           label: "simulink",
           url: "https://www.mathworks.com/products/simulink.html",
         },
-        { label: "git", url: "https://github.com/Kirillr-Sibirski" },
+        { label: "git", url: "https://github.com/Krlberg" },
       ],
     },
     {
