@@ -31,7 +31,7 @@ function BadgeList({ className, badges }: BadgeListProps) {
   return (
     <ul
       className={cn("inline-flex list-none gap-x-1 p-0", className)}
-      aria-label="technologies used"
+      aria-label="Technologies used"
     >
       {badges.map((badge) => (
         <li key={badge}>
@@ -61,9 +61,9 @@ function WorkPeriod({ start, end }: WorkPeriodProps) {
   return (
     <div
       className="resume-details font-mono tabular-nums text-foreground/50"
-      aria-label={`employment period: ${start} to ${end ?? "present"}`}
+      aria-label={`Employment period: ${start} to ${end ?? "Present"}`}
     >
-      {start} - {end ?? "present"}
+      {start} - {end ?? "Present"}
     </div>
   );
 }
@@ -89,7 +89,7 @@ function CompanyLink({ company, link }: CompanyLinkProps) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`${company} company website`}
+      aria-label={`${company} website`}
     >
       {company}
     </a>
@@ -106,7 +106,7 @@ function ArticleLink({ articleLink, articleLabel }: ArticleLinkProps) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      {articleLabel ?? "feature"}
+      {articleLabel ?? "Feature"}
     </a>
   );
 }
@@ -167,7 +167,7 @@ interface WorkExperienceProps {
  */
 export function WorkExperience({
   work,
-  title = "core experience",
+  title = "Core experience",
 }: WorkExperienceProps) {
   return (
     <Section>

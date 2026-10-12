@@ -8,32 +8,32 @@ import { Header } from "./components/Header";
 import { Hackathons } from "./components/Hackathons";
 
 const SITE_URL = "https://krlberg.dev";
-const TITLE = "kirill rybkov cv";
+const TITLE = "Kirill Rybkov CV";
 
 // The on-page bio is intentionally blank right now; link previews still need
 // something, so fall back rather than shipping an empty description.
 const DESCRIPTION =
   RESUME_DATA.about ||
-  "engineering, hardware, and software projects by kirill rybkov.";
+  "Engineering, hardware, and software projects by Kirill Rybkov.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: TITLE,
   description: DESCRIPTION,
-  applicationName: "kirill rybkov",
-  authors: [{ name: "kirill rybkov", url: SITE_URL }],
-  creator: "kirill rybkov",
+  applicationName: "Kirill Rybkov",
+  authors: [{ name: "Kirill Rybkov", url: SITE_URL }],
+  creator: "Kirill Rybkov",
   keywords: [
-    "kirill rybkov",
-    "advanced technology",
-    "university of twente",
-    "embedded systems",
-    "control systems",
+    "Kirill Rybkov",
+    "Advanced Technology",
+    "University of Twente",
+    "Embedded systems",
+    "Control systems",
     "FMEA",
-    "reliability engineering",
-    "hardware prototyping",
-    "typescript",
-    "next.js",
+    "Reliability engineering",
+    "Hardware prototyping",
+    "TypeScript",
+    "Next.js",
   ],
   alternates: { canonical: "/" },
   robots: {
@@ -66,20 +66,20 @@ export const metadata: Metadata = {
 const PERSON_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "kirill rybkov",
+  name: "Kirill Rybkov",
   url: SITE_URL,
   description: DESCRIPTION,
   alumniOf: [
-    { "@type": "CollegeOrUniversity", name: "university of twente" },
-    { "@type": "HighSchool", name: "the british school of barcelona" },
+    { "@type": "CollegeOrUniversity", name: "University of Twente" },
+    { "@type": "HighSchool", name: "The British School of Barcelona" },
   ],
   knowsAbout: [
-    "embedded electronics",
-    "control systems",
+    "Embedded electronics",
+    "Control systems",
     "CAD",
-    "reliability engineering",
+    "Reliability engineering",
     "FMEA",
-    "full-stack web development",
+    "Full-stack web development",
   ],
   sameAs: RESUME_DATA.contact.social.map((s) => s.url),
 };
@@ -106,26 +106,26 @@ export default function ResumePage() {
 
       <section
         className="mx-auto w-full max-w-3xl space-y-8 bg-white print:space-y-1.5"
-        aria-label="resume content"
+        aria-label="Resume content"
       >
         <Header />
 
         <div className="space-y-8 print:space-y-1.5">
           <Skills
             categories={RESUME_DATA.skillCategories}
-            sectionTitle="tech stack"
+            sectionTitle="Tech stack"
           />
 
-          <WorkExperience work={RESUME_DATA.work} title="experience" />
+          <WorkExperience work={RESUME_DATA.work} title="Experience" />
 
           <WorkExperience
             work={RESUME_DATA.engineeringProjects}
-            title="engineering projects"
+            title="Engineering projects"
           />
 
           <Education
             institutions={[
-              { ...university, curriculum: RESUME_DATA.curriculum },
+              university,
               secondary,
             ]}
           />

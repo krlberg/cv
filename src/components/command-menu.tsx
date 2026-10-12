@@ -36,7 +36,7 @@ export const CommandMenu = ({ links }: Props) => {
   return (
     <>
       <p className="resume-body fixed bottom-0 left-0 right-0 hidden border-t border-t-muted bg-white p-1 text-center text-muted-foreground print:hidden xl:block">
-        press{" "}
+        Press{" "}
         <kbd className="resume-body pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono font-medium text-muted-foreground opacity-100">
           <span className="resume-details">⌘</span>j
         </kbd>{" "}
@@ -51,20 +51,20 @@ export const CommandMenu = ({ links }: Props) => {
         <CommandIcon className="my-6 size-6" />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="type something, or just poke around" />
+        <CommandInput placeholder="Type something, or just poke around" />
         <CommandList>
-          <CommandEmpty>nothing. try fewer letters.</CommandEmpty>
-          <CommandGroup heading="actions">
+          <CommandEmpty>Nothing found. Try fewer letters.</CommandEmpty>
+          <CommandGroup heading="Actions">
             <CommandItem
               onSelect={() => {
                 setOpen(false);
                 window.print();
               }}
             >
-              <span>print</span>
+              <span>Print</span>
             </CommandItem>
           </CommandGroup>
-          <CommandGroup heading="links">
+          <CommandGroup heading="Links">
             {links.map(({ url, title }) => (
               <CommandItem
                 key={url}

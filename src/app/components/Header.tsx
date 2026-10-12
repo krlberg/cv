@@ -23,7 +23,7 @@ function LocationLink({ locations }: LocationLinkProps) {
               href={location.url}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`location: ${location.label}`}
+              aria-label={`Location: ${location.label}`}
             >
               {location.label}
             </a>
@@ -65,20 +65,20 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
     <div
       className="resume-body flex gap-x-1 font-mono text-foreground/70 print:hidden"
       role="list"
-      aria-label="contact links"
+      aria-label="Contact links"
     >
       {personalWebsiteUrl && (
         <SocialButton
           href={personalWebsiteUrl}
           icon={GlobeIcon}
-          label="personal website"
+          label="Personal website"
         />
       )}
       {contact.email && (
         <SocialButton
           href={`mailto:${contact.email}`}
           icon={MailIcon}
-          label="email"
+          label="Email"
         />
       )}
       {contact.social.map((social) => (
@@ -102,14 +102,14 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
   return (
     <div
       className="resume-details hidden font-mono text-foreground/70 print:flex print:flex-wrap print:items-center print:gap-x-4"
-      aria-label="print contact information"
+      aria-label="Print contact information"
     >
       {personalWebsiteUrl && (
         <a
           href={personalWebsiteUrl}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="personal website"
+          aria-label="Personal website"
         >
           <GlobeIcon className="size-4 text-foreground/70" />
         </a>
@@ -119,7 +119,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
           href={`mailto:${contact.email}`}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`email: ${contact.email}`}
+          aria-label={`Email: ${contact.email}`}
         >
           <MailIcon className="size-4 text-foreground/70" />
         </a>

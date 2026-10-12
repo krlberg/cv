@@ -32,7 +32,7 @@ function SkillsList({ title, skills, className }: SkillsListProps) {
       <h3 className="resume-details font-mono text-foreground/50">{title}</h3>
       <ul
         className={cn("flex list-none flex-wrap gap-1 p-0", className)}
-        aria-label={`list of ${title.toLowerCase()}`}
+        aria-label={`${title} skills`}
       >
         {skills.map((skill) => (
           <li key={skill.label}>
@@ -41,7 +41,7 @@ function SkillsList({ title, skills, className }: SkillsListProps) {
               target="_blank"
               rel="noopener noreferrer"
               className={badgeVariants({ variant: "secondary" })}
-              aria-label={`skill: ${skill.label}`}
+              aria-label={`Skill: ${skill.label}`}
             >
               {skill.label}
             </a>
@@ -68,7 +68,7 @@ export function Skills({
   skills,
   categories,
   className,
-  sectionTitle = "core stack",
+  sectionTitle = "Core stack",
   categoryTitles,
 }: SkillsProps) {
   const resolvedCategories =
@@ -77,17 +77,17 @@ export function Skills({
       ? [
           {
             id: "blockchain",
-            title: categoryTitles?.blockchain ?? "blockchain",
+            title: categoryTitles?.blockchain ?? "Blockchain",
             skills: skills.blockchain,
           },
           {
             id: "frontend",
-            title: categoryTitles?.frontend ?? "frontend",
+            title: categoryTitles?.frontend ?? "Frontend",
             skills: skills.frontend,
           },
           {
             id: "focus",
-            title: categoryTitles?.focus ?? "focus areas",
+            title: categoryTitles?.focus ?? "Focus areas",
             skills: skills.focus,
           },
         ]

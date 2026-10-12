@@ -93,7 +93,7 @@ function EducationCard({ item }: { item: Institution }) {
               )}
               aria-hidden="true"
             />
-            {open ? "hide" : "show"} {courseCount} results
+            {open ? "Hide" : "Show"} {courseCount} results
           </button>
 
           <div
@@ -155,7 +155,7 @@ export function Education({
   return (
     <Section>
       <h2 className="resume-section-title font-bold" id="education-section">
-        education
+        Education
       </h2>
       <div
         className="space-y-3 print:space-y-1"

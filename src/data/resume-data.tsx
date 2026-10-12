@@ -2,42 +2,42 @@ import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 import { SendIcon } from "lucide-react";
 
 /**
- * House style: body copy stays lowercase, but acronyms are written uppercase
- * and rendered as authored (the global lowercase text-transform was removed so
- * GPA, PID, CAD and friends survive).
+ * House style: standard sentence case for copy, proper nouns and product names
+ * written the way their owners write them, acronyms uppercase. Everything is
+ * rendered as authored; there is no CSS text-transform.
  */
 export const RESUME_DATA = {
-  name: "kirill rybkov",
-  initials: "kr",
+  name: "Kirill Rybkov",
+  initials: "KR",
   locations: [
     {
-      label: "🇳🇱 netherlands",
+      label: "🇳🇱 Netherlands",
       url: "https://www.google.com/maps/place/Enschede",
     },
   ],
   about:
-    "bachelor advanced technology student @ university of twente. experience across embedded electronics, control systems, CAD, and full-stack product work.",
+    "Bachelor Advanced Technology student at the University of Twente. Wrote my first code on an Arduino at 10 and did my first crypto hackathon at 14. Now Chief of Software at RISE and co-founder of Risk on Radar.",
   avatarUrl: "./image.png",
   contact: {
     email: "",
     social: [
       {
-        name: "github",
+        name: "GitHub",
         url: "https://github.com/Krlberg",
         icon: GitHubIcon,
       },
       {
-        name: "linkedin",
+        name: "LinkedIn",
         url: "https://www.linkedin.com/in/kirillrybkov/",
         icon: LinkedInIcon,
       },
       {
-        name: "x",
+        name: "X",
         url: "https://x.com/krlberg",
         icon: XIcon,
       },
       {
-        name: "telegram",
+        name: "Telegram",
         url: "https://t.me/krlberg",
         icon: SendIcon,
       },
@@ -47,14 +47,14 @@ export const RESUME_DATA = {
   skillCategories: [
     {
       id: "embedded",
-      title: "electronics & embedded",
+      title: "Electronics & embedded",
       skills: [
-        { label: "arduino", url: "https://www.arduino.cc/" },
+        { label: "Arduino", url: "https://www.arduino.cc/" },
         {
           label: "ESP32",
           url: "https://www.espressif.com/en/products/socs/esp32",
         },
-        { label: "raspberry pi", url: "https://www.raspberrypi.com/" },
+        { label: "Raspberry Pi", url: "https://www.raspberrypi.com/" },
         {
           label: "PWM / analog / digital I/O",
           url: "https://docs.arduino.cc/",
@@ -64,7 +64,7 @@ export const RESUME_DATA = {
           url: "https://learn.sparkfun.com/tutorials/i2c/all",
         },
         {
-          label: "signal conditioning",
+          label: "Signal conditioning",
           url: "https://en.wikipedia.org/wiki/Signal_conditioning",
         },
         {
@@ -75,11 +75,11 @@ export const RESUME_DATA = {
     },
     {
       id: "mechanical",
-      title: "mechanical / CAD",
+      title: "Mechanical / CAD",
       skills: [
-        { label: "onshape", url: "https://www.onshape.com/en/" },
-        { label: "solidworks", url: "https://www.solidworks.com/" },
-        { label: "kicad", url: "https://www.kicad.org/" },
+        { label: "Onshape", url: "https://www.onshape.com/en/" },
+        { label: "SolidWorks", url: "https://www.solidworks.com/" },
+        { label: "KiCad", url: "https://www.kicad.org/" },
         {
           label: "3D printing",
           url: "https://en.wikipedia.org/wiki/3D_printing",
@@ -88,32 +88,32 @@ export const RESUME_DATA = {
     },
     {
       id: "software",
-      title: "software",
+      title: "Software",
       skills: [
-        { label: "python", url: "https://www.python.org/" },
+        { label: "Python", url: "https://www.python.org/" },
         { label: "C/C++", url: "https://isocpp.org/" },
-        { label: "typescript", url: "https://www.typescriptlang.org/docs/" },
-        { label: "react", url: "https://react.dev/learn" },
-        { label: "next.js", url: "https://nextjs.org/docs" },
+        { label: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
+        { label: "React", url: "https://react.dev/learn" },
+        { label: "Next.js", url: "https://nextjs.org/docs" },
         {
           label: "MATLAB",
           url: "https://www.mathworks.com/products/matlab.html",
         },
         {
-          label: "simulink",
+          label: "Simulink",
           url: "https://www.mathworks.com/products/simulink.html",
         },
-        { label: "git", url: "https://github.com/Krlberg" },
+        { label: "Git", url: "https://github.com/Krlberg" },
       ],
     },
     {
       id: "blockchain",
-      title: "blockchain",
+      title: "Blockchain",
       skills: [
-        { label: "solidity", url: "https://soliditylang.org/" },
-        { label: "foundry", url: "https://www.getfoundry.sh/" },
-        { label: "viem", url: "https://v1.viem.sh/docs/getting-started.html" },
-        { label: "radix dapp toolkit", url: "https://docs.radixdlt.com/" },
+        { label: "Solidity", url: "https://soliditylang.org/" },
+        { label: "Foundry", url: "https://www.getfoundry.sh/" },
+        { label: "Viem", url: "https://v1.viem.sh/docs/getting-started.html" },
+        { label: "Radix dApp Toolkit", url: "https://docs.radixdlt.com/" },
       ],
     },
   ],
@@ -121,88 +121,93 @@ export const RESUME_DATA = {
   // Reverse-chronological by start date.
   work: [
     {
-      company: "rise",
+      company: "RISE",
       link: "https://www.riseteam.nl/",
       badges: ["C++", "F Prime"],
-      title: "software member",
-      start: "sep 2026",
+      title: "Chief of Software",
+      start: "Sep 2026",
       end: undefined,
       description:
-        "developing various systems required for the operations of a model rocket using the F Prime framework.",
+        "Developing various systems required for the operations of a model rocket using the F Prime framework.",
     },
     {
-      company: "risk on radar",
+      company: "Risk on Radar",
       link: "https://riskonradar.com",
       articleLink: "https://www.linkedin.com/company/riskonradar/",
-      articleLabel: "linkedin",
-      badges: ["FMEA", "reliability", "next.js", "typescript"],
-      title: "co-founder",
-      start: "apr 2026",
+      articleLabel: "LinkedIn",
+      badges: ["FMEA", "Reliability", "Next.js", "TypeScript"],
+      title: "Co-founder & CTO",
+      start: "Apr 2026",
       end: undefined,
       description:
-        "an FMEA platform for reliability engineers. it reads the papers, standards and NDT reports nobody has time for, turns them into reusable failure modes, and models how those failures propagate between subsystems.",
+        "A platform that turns scattered knowledge on why engineered parts fail into one searchable database. As CTO I designed the architecture of the app and lead the technical side.",
     },
     {
-      company: "lattic3",
+      company: "Lattic3",
       link: "https://lattic3.xyz",
       articleLink: "https://www.radixdlt.com/blog/meet-the-project-lattic3",
-      articleLabel: "radix feature",
-      badges: ["DeFi", "flash loans", "next.js"],
-      title: "co-founder",
-      start: "oct 2024",
-      end: "aug 2025",
+      articleLabel: "Radix feature",
+      badges: ["DeFi", "Flash loans", "Next.js"],
+      title: "Co-founder",
+      start: "Oct 2024",
+      end: "Aug 2025",
       description:
-        "a DeFi strategies protocol on radix, built with one other engineer. i owned the frontend and the discovery, deposit and position flows. $20k in radix foundation grants, launched on mainnet; the first strategy used flash loans for leveraged lending positions.",
+        "Started as Radish, our 2nd place project at EBC10, and grew into a strategy layer on Radix that packages leveraged yield strategies into one-click actions. I led the frontend and marketing while my co-founder wrote the Scrypto contracts. We received $20k in Radix grants and launched on mainnet with the Yield Multiplier, which loops lending positions using flash loans.",
     },
   ],
 
   engineeringProjects: [
     {
-      company: "active suspension system",
-      link: "https://drive.google.com/file/d/1RVng1U3ozTkHGZV1VvMJidTT9ehvyb1P/view?usp=sharing",
-      badges: ["arduino", "IMU", "PID", "CAD", "3D printing"],
-      title: "completed during EPQ A-Level",
+      company: "Active suspension system",
+      link: "https://drive.google.com/drive/folders/1hprdeT0JMgE3-AiZxd2pWb7bdW5ykoQd",
+      badges: ["Arduino", "IMU", "PID", "CAD", "3D printing"],
+      title: "Completed during EPQ A-Level",
       start: "",
       end: "",
       description: (
         <p>
-          active anti-roll system for a 1/10 off-road RC car. designed the
-          linkage and printed parts, wired an arduino nano to an MPU6050 IMU,
-          and wrote the PID in C/C++ driving servo ride-height adjustment. the
-          hard part was the real world: packaging the electronics on the
-          chassis and tuning the loop on slopes and rough ground.
+          Active suspension system for a 1/10 off-road RC car, built to stop
+          it rolling over or losing grip on uneven ground. An Arduino Nano
+          reads the tilt from an MPU6050 IMU, and a PID controller I wrote in
+          C++ drives servos that shift the car&apos;s centre of mass and keep all
+          four wheels on the ground. I designed and 3D printed the linkages and
+          mounts, then tuned the controller on slopes and rough terrain.
         </p>
       ),
     },
     {
-      company: "autonomous fire detection aircraft",
+      company: "Autonomous fire detection aircraft",
       link: undefined,
-      badges: ["UAV", "flight controller", "GPS", "raspberry pi"],
-      title: "high school team project",
+      badges: ["UAV", "Flight controller", "GPS", "Raspberry Pi"],
+      title: "High school team project",
       start: "",
       end: "",
       description: (
         <p>
-          fixed-wing drone for early wildfire detection in catalonia. i owned
-          the electronics and physical build: speedybee flight controller, power
-          system, GPS, receiver, and a raspberry pi payload, integrated into an
-          airframe light enough to fly and tough enough to land.
+          Fixed-wing drone designed to spot wildfires early in Catalonia. I was
+          in charge of the electronics and the build, which meant wiring up the
+          SpeedyBee flight controller, power system, GPS, receiver and a
+          Raspberry Pi, and fitting it all into the airframe.
         </p>
       ),
     },
     {
-      company: "piezoelectric accelerometer",
+      company: "Piezoelectric accelerometer",
       link: "https://drive.google.com/file/d/12hf3-xHmd9VUs-cSkcsxMcEc7xe-uF2a/view?usp=sharing",
-      badges: ["charge amplifier", "arduino", "signal conditioning"],
-      title: "university team project",
+      badges: ["Charge amplifier", "Arduino", "Signal conditioning"],
+      title: "University team project",
       start: "",
       end: "",
       description: (
         <p>
-          piezoelectric accelerometer for subwoofer testing. built the
-          electronics and software side: integrator-based signal conditioning,
-          arduino readout, and calibration, then reconciled the mechanical
-          model against measured shaker-test results.
+          University project: an accelerometer for measuring subwoofer
+          vibrations, built from a piezo ring and a brass mass inside a 3D
+          printed housing. I worked on the electronics and software. The
+          piezo only gives off a tiny charge, so I used a charge amplifier to
+          turn it into a voltage, biased to 2.5 V so it fits the
+          Arduino&apos;s 0 to 5 V input and filtered to the subwoofer&apos;s
+          frequency range. We then calibrated it on a shaker against a
+          reference accelerometer.
         </p>
       ),
     },
@@ -210,23 +215,23 @@ export const RESUME_DATA = {
 
   education: {
     university: {
-      school: "university of twente",
+      school: "University of Twente",
       schoolUrl: "https://www.utwente.nl/en/",
-      degree: "bachelor advanced technology",
+      degree: "Bachelor Advanced Technology",
       degreeUrl:
         "https://www.utwente.nl/en/education/bachelor/programmes/advanced-technology/",
-      start: "sep 2025",
-      end: "sep 2028",
+      start: "Sep 2025",
+      end: "Sep 2028",
       gpa: "7.2 / 10",
       courseGroups: [],
     },
     secondary: {
-      school: "the british school of barcelona",
+      school: "The British School of Barcelona",
       schoolUrl: "https://www.britishschoolbarcelona.com/",
       degree: "A-Levels & IGCSE",
       degreeUrl: "",
-      start: "sep 2021",
-      end: "jun 2025",
+      start: "Sep 2021",
+      end: "Jun 2025",
       summary: "A*A*AAA",
       courseGroups: [],
     },
@@ -247,254 +252,254 @@ export const RESUME_DATA = {
     disciplines: [
       {
         id: "maths",
-        title: "mathematics & computation",
-        blurb: "the analytical backbone, and the numerical tools built on it.",
+        title: "Mathematics & computation",
+        blurb: "The analytical backbone, and the numerical tools built on it.",
         courses: [
           {
-            name: "calculus 1",
+            name: "Calculus 1",
             ec: 4,
             done: true,
-            desc: "limits, differentiation, integration and series in one variable.",
+            desc: "Limits, differentiation, integration and series in one variable.",
           },
           {
-            name: "calculus 2",
+            name: "Calculus 2",
             ec: 4,
             done: true,
-            desc: "multivariable calculus: partial derivatives, multiple integrals, vector fields.",
+            desc: "Multivariable calculus: partial derivatives, multiple integrals, vector fields.",
           },
           {
-            name: "linear algebra",
+            name: "Linear Algebra",
             ec: 3,
             done: true,
-            desc: "vectors, matrices, eigenvalues and linear transformations.",
+            desc: "Vectors, matrices, eigenvalues and linear transformations.",
           },
           {
-            name: "error analysis & programming skills",
+            name: "Error Analysis & Programming Skills",
             ec: 3,
             done: true,
-            desc: "measurement uncertainty and error propagation, taught alongside MATLAB.",
+            desc: "Measurement uncertainty and error propagation, taught alongside MATLAB.",
           },
           {
-            name: "statistics for engineers",
+            name: "Statistics for Engineers",
             ec: 3,
             done: false,
-            desc: "probability, distributions, hypothesis testing and regression.",
+            desc: "Probability, distributions, hypothesis testing and regression.",
           },
           {
-            name: "finite element methods",
+            name: "Finite Element Methods",
             ec: 4,
             done: false,
-            desc: "numerical solution of field and structural problems by discretisation.",
+            desc: "Numerical solution of field and structural problems by discretisation.",
           },
           {
-            name: "machine learning",
+            name: "Machine Learning",
             ec: 3,
             done: false,
-            desc: "supervised and unsupervised learning applied to engineering data.",
+            desc: "Supervised and unsupervised learning applied to engineering data.",
           },
           {
-            name: "computational thinking",
+            name: "Computational Thinking",
             ec: 4,
             done: false,
-            desc: "chosen elective: decomposing problems into algorithms and data structures.",
+            desc: "Chosen elective: decomposing problems into algorithms and data structures.",
           },
         ],
       },
       {
         id: "mechanics",
-        title: "mechanics & dynamics",
-        blurb: "how bodies move and how systems respond over time.",
+        title: "Mechanics & dynamics",
+        blurb: "How bodies move and how systems respond over time.",
         courses: [
           {
-            name: "mechanics",
+            name: "Mechanics",
             ec: 4,
             done: true,
-            desc: "statics and dynamics of rigid bodies: forces, moments, motion.",
+            desc: "Statics and dynamics of rigid bodies: forces, moments, motion.",
           },
           {
-            name: "mechanics lab",
+            name: "Mechanics Lab",
             ec: 4,
             done: true,
-            desc: "experimental verification of mechanics theory in the lab.",
+            desc: "Experimental verification of mechanics theory in the lab.",
           },
           {
-            name: "system dynamics 1",
+            name: "System Dynamics 1",
             ec: 3,
             done: true,
-            desc: "modelling dynamic systems and their response in the time domain.",
+            desc: "Modelling dynamic systems and their response in the time domain.",
           },
           {
-            name: "system dynamics 2",
+            name: "System Dynamics 2",
             ec: 4,
             done: true,
-            desc: "frequency-domain analysis, transfer functions and feedback.",
+            desc: "Frequency-domain analysis, transfer functions and feedback.",
           },
           {
-            name: "system dynamics 3",
+            name: "System Dynamics 3",
             ec: 4,
             done: false,
-            desc: "continues system dynamics 1 and 2: modelling and validating physical systems.",
+            desc: "Continues System Dynamics 1 and 2: modelling and validating physical systems.",
           },
         ],
       },
       {
         id: "signals",
-        title: "signals & modelling",
-        blurb: "describing systems well enough to predict what they will do.",
+        title: "Signals & modelling",
+        blurb: "Describing systems well enough to predict what they will do.",
         courses: [
           {
-            name: "signals",
+            name: "Signals",
             ec: 4,
             done: false,
-            desc: "continuous and discrete signals, Fourier analysis, sampling and filtering.",
+            desc: "Continuous and discrete signals, Fourier analysis, sampling and filtering.",
           },
           {
-            name: "engineering system dynamics",
+            name: "Engineering System Dynamics",
             ec: 5,
             done: false,
-            desc: "systems and control module: modelling multi-domain dynamic systems.",
+            desc: "Systems and Control module: modelling multi-domain dynamic systems.",
           },
           {
-            name: "control engineering",
+            name: "Control Engineering",
             ec: 5,
             done: false,
-            desc: "systems and control module: feedback design, stability and controller tuning.",
+            desc: "Systems and Control module: feedback design, stability and controller tuning.",
           },
         ],
       },
       {
         id: "electronics",
-        title: "electronics & fields",
-        blurb: "circuits, measurement, and the electromagnetics underneath.",
+        title: "Electronics & fields",
+        blurb: "Circuits, measurement, and the electromagnetics underneath.",
         courses: [
           {
-            name: "basic electronics and instrumentation",
+            name: "Basic Electronics and Instrumentation",
             ec: 4,
             done: true,
-            desc: "analogue circuits, op-amps, and turning sensor output into measurement.",
+            desc: "Analogue circuits, op-amps, and turning sensor output into measurement.",
           },
           {
-            name: "electro- and magnetostatics",
+            name: "Electro- and Magnetostatics",
             ec: 5,
             done: false,
-            desc: "static electric and magnetic fields; Maxwell in the steady state.",
+            desc: "Static electric and magnetic fields; Maxwell in the steady state.",
           },
           {
-            name: "electro- and magnetodynamics",
+            name: "Electro- and Magnetodynamics",
             ec: 3,
             done: false,
-            desc: "time-varying fields, waves and propagation.",
+            desc: "Time-varying fields, waves and propagation.",
           },
         ],
       },
       {
         id: "materials",
-        title: "materials & physics",
-        blurb: "what materials are made of, how they behave, why they fail.",
+        title: "Materials & physics",
+        blurb: "What materials are made of, how they behave, why they fail.",
         courses: [
           {
-            name: "structures and properties of materials",
+            name: "Structures and Properties of Materials",
             ec: 3,
             done: true,
-            desc: "crystal structure, defects, and how microstructure sets mechanical behaviour.",
+            desc: "Crystal structure, defects, and how microstructure sets mechanical behaviour.",
           },
           {
-            name: "properties of polymer materials",
+            name: "Properties of Polymer Materials",
             ec: 3,
             done: true,
-            desc: "polymer chains, thermal transitions and viscoelastic response.",
+            desc: "Polymer chains, thermal transitions and viscoelastic response.",
           },
           {
-            name: "quantum matter and devices",
+            name: "Quantum Matter and Devices",
             ec: 4,
             done: true,
-            desc: "quantum mechanics applied to semiconductors and solid-state devices.",
+            desc: "Quantum mechanics applied to semiconductors and solid-state devices.",
           },
           {
-            name: "classical thermodynamics",
+            name: "Classical Thermodynamics",
             ec: 4,
             done: true,
-            desc: "energy, entropy, and the laws governing heat and work.",
+            desc: "Energy, entropy, and the laws governing heat and work.",
           },
           {
-            name: "diffraction lab",
+            name: "Diffraction Lab",
             ec: 1,
             done: true,
-            desc: "diffraction methods for determining crystal structure.",
+            desc: "Diffraction methods for determining crystal structure.",
           },
         ],
       },
       {
         id: "projects",
-        title: "projects",
-        blurb: "the build-something-and-defend-it half of the degree.",
+        title: "Projects",
+        blurb: "The build-something-and-defend-it half of the degree.",
         courses: [
           {
-            name: "project accelerometer",
+            name: "Project Accelerometer",
             ec: 4,
             done: true,
-            desc: "the piezoelectric accelerometer build listed under engineering projects above.",
+            desc: "The piezoelectric accelerometer build listed under engineering projects above.",
           },
           {
-            name: "project energy transition",
+            name: "Project Energy Transition",
             ec: 6,
             done: true,
-            desc: "semester project on sustainable energy systems and their trade-offs.",
+            desc: "Semester project on sustainable energy systems and their trade-offs.",
           },
           {
-            name: "project SMS",
+            name: "Project SMS",
             ec: 3,
             done: false,
-            desc: "signals, models and systems applied in a design project.",
+            desc: "Signals, models and systems applied in a design project.",
           },
           {
-            name: "project antenna",
+            name: "Project Antenna",
             ec: 3,
             done: false,
-            desc: "design, simulation and measurement of an antenna.",
+            desc: "Design, simulation and measurement of an antenna.",
           },
           {
-            name: "project systems and control",
+            name: "Project Systems and Control",
             ec: 5,
             done: false,
-            desc: "systems and control module: designing and validating a controlled system.",
+            desc: "Systems and Control module: designing and validating a controlled system.",
           },
           {
-            name: "preparation bachelor assignment",
+            name: "Preparation Bachelor Assignment",
             ec: 3,
             done: false,
-            desc: "scoping and planning the final bachelor project.",
+            desc: "Scoping and planning the final bachelor project.",
           },
           {
-            name: "BSc assignment",
+            name: "BSc Assignment",
             ec: 0,
             done: false,
-            desc: "the final project, assessed on scientific/design work, communication and process.",
+            desc: "The final project, assessed on scientific/design work, communication and process.",
           },
         ],
       },
       {
         id: "context",
-        title: "engineering in context",
-        blurb: "the strand on impact, ethics, and turning work into product.",
+        title: "Engineering in context",
+        blurb: "The strand on impact, ethics, and turning work into product.",
         courses: [
           {
-            name: "challenges in science and engineering 1",
+            name: "Challenges in Science and Engineering 1",
             ec: 2,
             done: true,
-            desc: "engineering in societal context: ethics, impact, professional practice.",
+            desc: "Engineering in societal context: ethics, impact, professional practice.",
           },
           {
-            name: "challenges in science & engineering 2",
+            name: "Challenges in Science & Engineering 2",
             ec: 1,
             done: false,
-            desc: "continuation of the engineering-in-context strand.",
+            desc: "Continuation of the engineering-in-context strand.",
           },
           {
-            name: "entrepreneurship & innovation management",
+            name: "Entrepreneurship & Innovation Management",
             ec: 6,
             done: false,
-            desc: "taking a technical idea toward a viable product and business.",
+            desc: "Taking a technical idea toward a viable product and business.",
           },
         ],
       },
@@ -502,99 +507,99 @@ export const RESUME_DATA = {
   },
   hackathons: [
     {
-      hackathon: "ethlisbon 2022",
+      hackathon: "ETHLisbon 2022",
       hackathonUrl: "https://ethlisbon.org/",
-      projectName: "lekker finance",
+      projectName: "Lekker Finance",
       projectUrl:
         "https://taikai.network/ethlisbon/hackathons/ethlisbon-2022/projects/cl9tpj350446301zcoiepyje5/idea",
-      achievement: "finalist | $10k",
+      achievement: "Finalist | $10k",
       teamSize: 4,
-      role: "design",
-      description: "one-click leveraged futures platform.",
-      techStack: ["euler", "sommelier finance", "DeFi", "leverage"],
+      role: "Design",
+      description: "One-click leveraged futures platform.",
+      techStack: ["Euler", "Sommelier Finance", "DeFi", "Leverage"],
     },
     {
-      hackathon: "ebc10 radix",
+      hackathon: "EBC10 Radix",
       hackathonUrl: "https://eblockchainconvention.com/hackathon/",
-      projectName: "radish (later lattic3)",
+      projectName: "Radish (later Lattic3)",
       projectUrl: "https://github.com/Lattic3-RDX/lending-dapp",
       achievement: "2nd place | $5k",
       teamSize: 2,
-      role: "frontend",
-      description: "multi-collateralized lending dapp built on radix.",
-      techStack: ["next.js", "radix", "lending"],
+      role: "Frontend",
+      description: "Multi-collateralized lending dApp built on Radix.",
+      techStack: ["Next.js", "Radix", "Lending"],
     },
     {
-      hackathon: "buildup #2",
+      hackathon: "BuildUP #2",
       hackathonUrl:
         "https://medium.com/lukso/buildup-2-hackathon-winners-0f784793bc43",
-      projectName: "lukso lending protocol",
+      projectName: "LUKSO Lending Protocol",
       projectUrl: "https://llp-woad.vercel.app/",
       achievement: "3rd place | 5k€",
       teamSize: 1,
-      role: "full stack",
-      description: "early lending protocol built on lukso.",
-      techStack: ["solidity", "lukso", "lending"],
+      role: "Full stack",
+      description: "Early lending protocol built on LUKSO.",
+      techStack: ["Solidity", "LUKSO", "Lending"],
     },
     {
-      hackathon: "xstocks cannes",
+      hackathon: "xStocks Cannes",
       hackathonUrl: "https://xstocks-market-open.devpost.com/",
-      projectName: "paragon",
+      projectName: "Paragon",
       projectUrl: "https://devpost.com/software/paragon-h8isc4",
-      achievement: "discretionary prize | $3.3k",
+      achievement: "Discretionary prize | $3.3k",
       teamSize: 3,
-      role: "full stack",
+      role: "Full stack",
       description:
-        "first-ever liquidation-free tokenized equity leverage platform on the ink chain.",
-      techStack: ["typescript", "react", "full stack"],
+        "First-ever liquidation-free tokenized equity leverage platform on the Ink chain.",
+      techStack: ["TypeScript", "React", "Full stack"],
     },
     {
-      hackathon: "ethoxford 2025",
+      hackathon: "ETHOxford 2025",
       hackathonUrl: "https://ethoxford.io",
-      projectName: "protein mango",
+      projectName: "Protein Mango",
       projectUrl: "https://dorahacks.io/buidl/22626",
-      achievement: "flare bounties | $3k",
+      achievement: "Flare bounties | $3k",
       teamSize: 3,
-      role: "frontend",
+      role: "Frontend",
       description:
-        "parametric earthquake insurance with automated claims via ZKPs.",
-      techStack: ["flare", "mina"],
+        "Parametric earthquake insurance with automated claims via ZKPs.",
+      techStack: ["Flare", "Mina"],
     },
     {
-      hackathon: "ethglobal brussels",
+      hackathon: "ETHGlobal Brussels",
       hackathonUrl: "https://ethglobal.com/events/brussels",
-      projectName: "scrbl",
+      projectName: "Scrbl",
       projectUrl: "https://ethglobal.com/showcase/scrbl-6d9uh",
-      achievement: "worldcoin pool prize",
+      achievement: "Worldcoin pool prize",
       teamSize: 3,
-      role: "solidity",
+      role: "Solidity",
       description:
-        "under-collateralized lending platform leveraging worldcoin identity.",
-      techStack: ["pyth", "chainlink", "World ID"],
+        "Under-collateralized lending platform leveraging Worldcoin identity.",
+      techStack: ["Pyth", "Chainlink", "World ID"],
     },
     {
-      hackathon: "ethglobal hackmoney 2026",
+      hackathon: "ETHGlobal HackMoney 2026",
       hackathonUrl: "https://ethglobal.com/events/hackmoney2026",
-      projectName: "oshio",
+      projectName: "Oshio",
       projectUrl: "https://ethglobal.com/showcase/oshio-99nv7",
-      achievement: "sui bounty | $1k",
+      achievement: "Sui bounty | $1k",
       teamSize: 1,
-      role: "frontend",
+      role: "Frontend",
       description:
-        "margin-trading app on sui focused on simpler UX, using deepbook and pyth to make leveraged trading more accessible.",
-      techStack: ["sui", "deepbook", "pyth", "next.js"],
+        "Margin-trading app on Sui focused on simpler UX, using DeepBook and Pyth to make leveraged trading more accessible.",
+      techStack: ["Sui", "DeepBook", "Pyth", "Next.js"],
     },
     {
-      hackathon: "chainlink convergence",
+      hackathon: "Chainlink Convergence",
       hackathonUrl: "https://chain.link/hackathon",
-      projectName: "aletheia",
+      projectName: "Aletheia",
       projectUrl: "https://aletheia-gilt.vercel.app",
       achievement: "World ID | $500",
       teamSize: 1,
-      role: "full stack",
+      role: "Full stack",
       description:
-        "prediction markets with AI consensus resolution and market creation (+ sybil resistance).",
-      techStack: ["tenderly", "chainlink cre", "World ID"],
+        "Prediction markets with AI consensus resolution and market creation (+ Sybil resistance).",
+      techStack: ["Tenderly", "Chainlink CRE", "World ID"],
     },
   ],
 } as const;

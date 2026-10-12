@@ -144,7 +144,7 @@ function ProgressRail({
       </div>
       {unlisted > 0 && (
         <p className="resume-details mt-1.5 font-mono text-foreground/50">
-          {itemised} EC listed below. the remaining {unlisted} EC is year 3,
+          {itemised} EC listed below. The remaining {unlisted} EC is year 3,
           which is not fixed yet.
         </p>
       )}
@@ -172,7 +172,7 @@ export function Curriculum({ data }: { data: CurriculumData }) {
           className={cn("size-3 transition-transform", open && "rotate-180")}
           aria-hidden="true"
         />
-        {open ? "hide" : "show"} curriculum
+        {open ? "Hide" : "Show"} curriculum
       </button>
 
       <div id={panelId} hidden={!open}>
@@ -184,16 +184,16 @@ export function Curriculum({ data }: { data: CurriculumData }) {
               aria-hidden="true"
               className="size-1.5 rounded-full bg-foreground"
             />
-            done
+            Done
           </span>
           <span className="inline-flex items-center gap-x-1.5">
             <span
               aria-hidden="true"
               className="size-1.5 rounded-full border border-foreground/50"
             />
-            not yet
+            Not yet
           </span>
-          <span>tap a course for what it covers.</span>
+          <span>Tap a course for what it covers.</span>
         </div>
 
         <div className="mt-3 grid gap-3 md:grid-cols-2">

@@ -70,10 +70,10 @@ export function Hackathons() {
     <Section className="print:space-y-2">
       <div className="flex items-baseline justify-between gap-3">
         <h2 className="resume-section-title font-bold" id="hackathon-projects">
-          hackathon projects
+          Hackathon projects
         </h2>
         <p className="resume-details font-mono text-foreground/50 print:hidden">
-          15+ hackathons. these are the ones that placed.
+          15+ hackathons
         </p>
       </div>
 

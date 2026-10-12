@@ -72,10 +72,7 @@
   }
   body {
     @apply bg-background font-sans text-foreground;
-    /*
-     * No global lowercase transform: copy is authored lowercase by hand so
-     * acronyms (GPA, PID, CAD, IMU, GPS, FMEA) can stay uppercase.
-     */
+    /* No text-transform: copy is rendered with the casing it is written in. */
   }
 
   html {

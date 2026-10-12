@@ -6,7 +6,7 @@ import { ImageResponse } from "next/og";
 import { RESUME_DATA } from "../data/resume-data";
 
 
-export const alt = "karl ryberg cv";
+export const alt = "Kirill Rybkov CV";
 export const size = {
   width: 1200,
   height: 630,
