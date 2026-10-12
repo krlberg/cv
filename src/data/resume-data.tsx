@@ -47,7 +47,7 @@ export const RESUME_DATA = {
   skillCategories: [
     {
       id: "embedded",
-      title: "Electronics & embedded",
+      title: "Electronics",
       skills: [
         { label: "Arduino", url: "https://www.arduino.cc/" },
         {
@@ -55,10 +55,6 @@ export const RESUME_DATA = {
           url: "https://www.espressif.com/en/products/socs/esp32",
         },
         { label: "Raspberry Pi", url: "https://www.raspberrypi.com/" },
-        {
-          label: "PWM / analog / digital I/O",
-          url: "https://docs.arduino.cc/",
-        },
         {
           label: "I2C sensors",
           url: "https://learn.sparkfun.com/tutorials/i2c/all",
@@ -75,7 +71,7 @@ export const RESUME_DATA = {
     },
     {
       id: "mechanical",
-      title: "Mechanical / CAD",
+      title: "Mechanical",
       skills: [
         { label: "Onshape", url: "https://www.onshape.com/en/" },
         { label: "SolidWorks", url: "https://www.solidworks.com/" },
@@ -83,6 +79,10 @@ export const RESUME_DATA = {
         {
           label: "3D printing",
           url: "https://en.wikipedia.org/wiki/3D_printing",
+        },
+        {
+          label: "Simulink",
+          url: "https://www.mathworks.com/products/simulink.html",
         },
       ],
     },
@@ -99,11 +99,11 @@ export const RESUME_DATA = {
           label: "MATLAB",
           url: "https://www.mathworks.com/products/matlab.html",
         },
-        {
-          label: "Simulink",
-          url: "https://www.mathworks.com/products/simulink.html",
-        },
         { label: "Git", url: "https://github.com/Krlberg" },
+        {
+          label: "Claude Code",
+          url: "https://www.claude.com/product/claude-code",
+        },
       ],
     },
     {
@@ -166,10 +166,10 @@ export const RESUME_DATA = {
       end: "",
       description: (
         <p>
-          Active suspension system for a 1/10 off-road RC car, built to stop
-          it rolling over or losing grip on uneven ground. An Arduino Nano
-          reads the tilt from an MPU6050 IMU, and a PID controller I wrote in
-          C++ drives servos that shift the car&apos;s centre of mass and keep all
+          Active suspension system for a 1/10 off-road RC car, built to stop it
+          rolling over or losing grip on uneven ground. An Arduino Nano reads
+          the tilt from an MPU6050 IMU, and a PID controller I wrote in C++
+          drives servos that shift the car&apos;s centre of mass and keep all
           four wheels on the ground. I designed and 3D printed the linkages and
           mounts, then tuned the controller on slopes and rough terrain.
         </p>
@@ -202,12 +202,11 @@ export const RESUME_DATA = {
         <p>
           University project: an accelerometer for measuring subwoofer
           vibrations, built from a piezo ring and a brass mass inside a 3D
-          printed housing. I worked on the electronics and software. The
-          piezo only gives off a tiny charge, so I used a charge amplifier to
-          turn it into a voltage, biased to 2.5 V so it fits the
-          Arduino&apos;s 0 to 5 V input and filtered to the subwoofer&apos;s
-          frequency range. We then calibrated it on a shaker against a
-          reference accelerometer.
+          printed housing. I worked on the electronics and software. The piezo
+          only gives off a tiny charge, so I used a charge amplifier to turn it
+          into a voltage, biased to 2.5 V so it fits the Arduino&apos;s 0 to 5 V
+          input and filtered to the subwoofer&apos;s frequency range. We then
+          calibrated it on a shaker against a reference accelerometer.
         </p>
       ),
     },

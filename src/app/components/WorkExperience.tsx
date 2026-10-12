@@ -35,10 +35,7 @@ function BadgeList({ className, badges }: BadgeListProps) {
     >
       {badges.map((badge) => (
         <li key={badge}>
-          <Badge
-            variant="secondary"
-            className="align-middle"
-          >
+          <Badge variant="secondary" className="align-middle">
             {badge}
           </Badge>
         </li>
@@ -169,26 +166,26 @@ export function WorkExperience({
   work,
   title = "Core experience",
 }: WorkExperienceProps) {
+  const headingId = title.toLowerCase().replace(/\s+/g, "-");
+  const items = work.map((item) => (
+    <article
+      key={`${item.company}-${item.start}`}
+      className="print:break-inside-avoid"
+    >
+      <WorkExperienceItem work={item} />
+    </article>
+  ));
+
   return (
-    <Section>
-      <h2 className="resume-section-title font-bold" id="work-experience">
-        {title}
-      </h2>
-      <div
-        className="space-y-3 print:space-y-1"
-        role="feed"
-        aria-labelledby="work-experience"
-      >
-        {work.map((item) => (
-          <article
-            key={`${item.company}-${item.start}`}
-            role="article"
-            className="print:break-inside-avoid"
-          >
-            <WorkExperienceItem work={item} />
-          </article>
-        ))}
+    <Section aria-labelledby={headingId}>
+      {/* Heading and first card travel together so the title never strands at the foot of a printed page. */}
+      <div className="flex flex-col gap-y-3 print:break-inside-avoid print:gap-y-1">
+        <h2 className="resume-section-title font-bold" id={headingId}>
+          {title}
+        </h2>
+        {items[0]}
       </div>
+      {items.slice(1)}
     </Section>
   );
 }
